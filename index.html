@@ -2,10 +2,22 @@
 <html>
 <head>
     <title>HAi!CO Merchant</title>
+    <script>
+        function redirectToAppOrPlayStore() {
+            // Check if the app is installed
+            if (/* Your logic to check if the app is installed */) {
+                // Redirect to the deep link
+                window.location.href = "https://www.haico.com/merchant/false/8/HAi!CO";
+            } else {
+                // Redirect to the Play Store page
+                window.location.href = "https://play.google.com/store/apps/details?id=YOUR_APP_PACKAGE_NAME";
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Welcome to HAi!CO Merchant</h1>
-    <p>Click the link below to visit the HAi!CO website:</p>
-    <a href="https://www.haico.com/merchant/false/8/HAi!CO">Visit HAi!CO</a>
+    <p>Click the link below to continue:</p>
+    <a href="javascript:redirectToAppOrPlayStore()">Continue</a>
 </body>
 </html>
