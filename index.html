@@ -2,27 +2,26 @@
 <html>
 <head>
     <title>HAi!CO Merchant</title>
-    <script src="path/to/app-availability.js"></script>
     <script>
-        function checkAppAvailability() {
-            var appPackage = "com.cardsys.lms.mobilebeta";
-            appAvailability.check(
-                appPackage,
-                function() {
-                    // App is installed, redirect to deep link
-                    window.location.href = "https://www.haico.com/merchant/false/8/HAi!CO";
-                },
-                function() {
-                    // App is not installed, redirect to Play Store
-                    window.location.href = "https://play.google.com/store/apps/details?id=com.cardsys.lms.mobile";
-                }
-            );
+        function redirectToPlayStore() {
+            window.location.href = 'https://play.google.com/store/apps/details?id=com.cardsys.lms.mobile';
         }
+
+        function checkWebsite() {
+            var img = new Image();
+            img.onload = function () {
+                window.location.href = 'https://www.haico.com/merchant/false/8/HAi!CO';
+            };
+            img.onerror = redirectToPlayStore;
+            img.src = 'https://www.haico.com/favicon.ico?' + new Date().getTime();
+        }
+
+        checkWebsite();
     </script>
 </head>
 <body>
     <h1>Welcome to HAi!CO Merchant</h1>
-    <p>Click the link below to continue:</p>
-    <a href="javascript:checkAppAvailability()">Continue</a>
+    <p>Click the link below to visit the HAi!CO website:</p>
+    <a href="https://www.haico.com/merchant/false/8/HAi!CO">Visit HAi!CO</a>
 </body>
 </html>
