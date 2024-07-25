@@ -1,0 +1,13 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.propagatetech.mysaku.mobilebeta",
+        "sha256_cert_fingerprints": [
+          "DE:26:18:46:8E:69:23:DD:A6:4E:41:1F:D4:E3:62:7C:63:98:B7:83:9D:4C:86:00:45:F4:46:EE:D9:C5:B3:8C"
+        ]
+      }
+    }
+  ]
+  
